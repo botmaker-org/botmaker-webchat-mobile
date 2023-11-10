@@ -1,5 +1,7 @@
 package com.example.webchat_java;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.ValueCallback;
@@ -9,6 +11,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,9 +22,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         WebView webView = findViewById(R.id.webView);
 
-        IBMWebchatLoader BMWebchat = new BMWebchatLoader(
+        Map<String, String> BOTMAKER_VAR = new HashMap<String, String>() {{
+            put("firstName", "Lionel");
+            put("lastName", "Scaloni");
+            put("customVar", "newValueForCustomVar");
+            put("userIdOnBusiness", "1");
+        }};
+
+        IBotmakerWebchat BMWebchat = new BotmakerWebchat(
                 webView,
-                "https://storage.googleapis.com/m-infra.appspot.com/public/GuilleDemo/peperBotMobile.html"
+                "KCRZV8L0G2",
+                BOTMAKER_VAR
         );
 
         LinearLayout frameLayout = findViewById(R.id.layoutInferior);
@@ -31,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         Button b_bmShow = frameLayout.findViewById(R.id.b_bmShow);
         Button b_bmSendMessage = frameLayout.findViewById(R.id.b_bmSendMessage);
         Button b_bmInfo = frameLayout.findViewById(R.id.b_bmInfo);
-        Button b_bmConnect = frameLayout.findViewById(R.id.b_bmConnect);
         Button b_bmSetVariables = frameLayout.findViewById(R.id.b_bmSetVariables);
 
         b_maximize.setOnClickListener(new View.OnClickListener() {
@@ -77,41 +87,34 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onReceiveValue(String value) {
                         System.out.println(value);
+                        showAlert(value);
                     }
                 });
             }
         });
-
-        b_bmConnect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BMWebchat.bmConnect();
-            }
-        });
-
         b_bmSetVariables.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BMWebchat.bmSetVariables(Map.of("nombre", "Dario"));
+                Map<String, String> variables = new HashMap<String, String>() {{
+                    put("variable_prueba", "prueba 1");
+                    put("variable_prueba_2", "prueba 2");
+                }};
+                BMWebchat.bmSetVariables(variables);
             }
         });
-
-        /*
-        --------------------
-        peperBotMobile.html:
-        --------------------
-        <!DOCTYPE html><html><body><!-- START Botmaker Webchat-->
-          <script>
-              (function () {
-                  let js = document.createElement('script');
-                  js.type = 'text/javascript';
-                  js.async = 1;
-                  js.src = 'https://go.botmaker.com/rest/webchat/p/KCRZV8L0G2/init.js';
-                  document.body.appendChild(js);
-              })();
-          </script>
-          <!-- END Botmaker Webchat--></body></html>
-        */
-
     }
+
+    private void showAlert(String value) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Info")
+                .setMessage(value);
+        builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
 }

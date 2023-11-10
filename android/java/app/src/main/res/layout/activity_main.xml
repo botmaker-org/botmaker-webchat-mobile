@@ -67,12 +67,6 @@
                 android:text="info" />
 
             <Button
-                android:id="@+id/b_bmConnect"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Connect" />
-
-            <Button
                 android:id="@+id/b_bmSetVariables"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,52 +77,3 @@
     </FrameLayout>
 
 </LinearLayout>
-
-
-    <!--
-    ********************************************************
-    prueba 1.
-    ********************************************************
-
-    -->
-
-
-
-
-
-    <!--
-    ********************************************************
-    prueba 2.
-    ********************************************************
-
-    <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            tools:ignore="Suspicious0dp">
-
-        </FrameLayout>
-
-
-        <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        tools:ignore="Suspicious0dp">
-            <WebView
-                android:id="@+id/webView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </FrameLayout>
-    </LinearLayout>
--->
