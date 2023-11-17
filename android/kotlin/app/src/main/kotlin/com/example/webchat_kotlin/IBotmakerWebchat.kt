@@ -4,43 +4,43 @@ import android.webkit.ValueCallback
 
 interface IBotmakerWebchat {
     /**
-     * Maximiza el webchat de Botmaker.
+     * Maximize Botmaker webchat.
      */
     fun bmMaximize()
 
     /**
-     * Minimiza el webchat de Botmaker.
+     * Minimize Botmaker webchat.
      */
     fun bmMinimize()
 
     /**
-     * Oculta el webchat de Botmaker.
+     * Hide Botmaker webchat.
      */
     fun bmHide()
 
     /**
-     * Visibiliza el webchat de Botmaker.
+     * Show Botmaker webchat.
      */
     fun bmShow()
 
     /**
-     * Envía un mensaje al webchat de botmaker.
+     * Send a message to Botmaker webchat.
      *
-     * @param inputText Mensaje a enviar.
+     * @param inputText Message to send.
      */
     fun bmSendMessage(inputText: String?)
 
     /**
-     * Devuelve informacion del webchat de Botmaker.
+     * Returns information from Botmaker webchat.
      *
-     * @param callback para obtener el mensaje de informacion devuelto por el webchat de Botmaker.
+     * @param callback to get the information message returned by the Botmaker webchat.
      */
     fun bmInfo(callback: ValueCallback<String?>?)
 
     /**
-     * Establece variables del webchat de Botmaker..
+     * Set Botmaker webchat variables.
      *
-     * @param variables Mapa con variables a establecer.
+     * @param variables Map with variables to set.
      */
     fun bmSetVariables(variables: Map<String?, String?>?)
 }

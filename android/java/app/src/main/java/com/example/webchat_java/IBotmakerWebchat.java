@@ -6,37 +6,37 @@ import java.util.Map;
 
 public interface IBotmakerWebchat {
     /**
-     * Maximiza el webchat de Botmaker.
+     * Maximize Botmaker webchat.
      */
     public void bmMaximize();
     /**
-     * Minimiza el webchat de Botmaker.
+     * Minimize Botmaker webchat.
      */
     public void bmMinimize();
     /**
-     * Oculta el webchat de Botmaker.
+     * Hide Botmaker webchat.
      */
     public void bmHide();
     /**
-     * Visibiliza el webchat de Botmaker.
+     * Show Botmaker webchat.
      */
     public void bmShow();
     /**
-     * Envía un mensaje al webchat de botmaker.
+     * Send a message to Botmaker webchat.
      *
-     * @param inputText Mensaje a enviar.
+     * @param inputText Message to send.
      */
     public void bmSendMessage(String inputText);
     /**
-     * Devuelve informacion del webchat de Botmaker.
+     * Returns information from Botmaker webchat.
      *
-     * @param callback para obtener el mensaje de informacion devuelto por el webchat de Botmaker.
+     * @param callback to get the information message returned by the Botmaker webchat.
      */
     public void bmInfo(final ValueCallback<String> callback);
     /**
-     * Establece variables del webchat de Botmaker..
+     * Set Botmaker webchat variables.
      *
-     * @param variables Mapa con variables a establecer.
+     * @param variables Map with variables to set.
      */
     public void bmSetVariables(Map<String, String> variables);
 }

@@ -23,23 +23,23 @@ public class BotmakerWebchat implements IBotmakerWebchat {
     private Boolean debugger = false;
 
     /**
-     * Constructor del webchat de Botmaker.
+     * Botmaker webchat Constructor.
      *
-     * @param webView Contenedor del webchat.
-     * @param webchatCode Codigo identificador del webchat.
-     * @param BOTMAKER_VAR Variables de configuracion del chat (keys: firstName, lastName, customVar, userIdOnBusiness).
-     * @param debugger (true - false) habilita la escucha de logs.
+     * @param webView Webchat container.
+     * @param webchatCode Webchat identifier code.
+     * @param BOTMAKER_VAR Webchat configuration variables (keys: firstName, lastName, customVar, userIdOnBusiness).
+     * @param debugger (true - false) Enable logs.
      */
     public BotmakerWebchat(WebView webView, String webchatCode, @Nullable Map<String, String> BOTMAKER_VAR, @Nullable Boolean debugger) {
         this.debugger = debugger;
         new BotmakerWebchat(webView,  webchatCode, BOTMAKER_VAR);
     }
     /**
-     * Constructor del webchat de Botmaker.
+     * Botmaker webchat Constructor.
      *
-     * @param webView Contenedor del webchat.
-     * @param webchatCode Codigo identificador del webchat.
-     * @param BOTMAKER_VAR Variables de configuracion del chat (keys: firstName, lastName, customVar, userIdOnBusiness).
+     * @param webView Webchat container.
+     * @param webchatCode Webchat identifier code.
+     * @param BOTMAKER_VAR Webchat configuration variables (keys: firstName, lastName, customVar, userIdOnBusiness).
      */
     public BotmakerWebchat(WebView webView, String webchatCode, @Nullable Map<String, String> BOTMAKER_VAR) {
         try {
