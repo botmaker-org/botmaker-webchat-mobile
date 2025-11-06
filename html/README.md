@@ -9,6 +9,10 @@ Ejemplo página HTML simple.
 
 ![alt text](image.png)
 
+El WebchatID configurable se saca de js.src:
+
+`js.src = 'https://go.botmaker.com/rest/webchat/p/A6TT4D3H4L/init.js'` --> A6TT4D3H4L
+
 - Métodos expuestos:
   `bmShow()`, `bmHide()`, `bmMinimize()`, `bmMaximize()`, `bmInfo()`,
   `bmSetVariables({...})`, `bmSendMessage('texto')`.

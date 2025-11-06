@@ -7,6 +7,10 @@ Ejemplo Webchat con Flutter.
 - El script de integración se consigue en:
   **go.botmaker.com/#/integrations/channels → Webchat -> "Probar Webchat" o "Instalación"**.
 
+El WebchatID configurable se saca de js.src:
+
+`js.src = 'https://go.botmaker.com/rest/webchat/p/A6TT4D3H4L/init.js'` --> A6TT4D3H4L
+
 ![alt text](image.png)
 
 **Para ejecutar**
