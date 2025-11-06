@@ -28,7 +28,7 @@ class _BotmakerWebchatPageState extends State<BotmakerWebchatPage> {
 
     <script>
       window.BOTMAKER_VAR = {
-        userIdOnBusiness: 'flutter-demo-' + Math.random().toString(36).slice(2),
+        userIdOnBusiness: 'userId123',
         firstName: 'Flutter',
         lastName: 'Demo'
       };
@@ -54,10 +54,6 @@ class _BotmakerWebchatPageState extends State<BotmakerWebchatPage> {
   @override
   void initState() {
     super.initState();
-
-    if (kIsWeb) {
-      WebViewPlatform.instance = WebViewPlatform.instance ?? WebViewPlatform.instance;
-    }
 
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)

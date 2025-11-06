@@ -10,7 +10,6 @@
         "flutter",
         "webview_flutter",
         "webview_flutter_android",
-        "webview_flutter_web",
         "webview_flutter_wkwebview"
       ],
       "devDependencies": []
@@ -30,16 +29,6 @@
       "version": "3.16.9",
       "dependencies": [
         "flutter",
-        "webview_flutter_platform_interface"
-      ]
-    },
-    {
-      "name": "webview_flutter_web",
-      "version": "0.2.3+4",
-      "dependencies": [
-        "flutter",
-        "flutter_web_plugins",
-        "web",
         "webview_flutter_platform_interface"
       ]
     },
@@ -83,18 +72,6 @@
       "name": "meta",
       "version": "1.16.0",
       "dependencies": []
-    },
-    {
-      "name": "web",
-      "version": "1.1.1",
-      "dependencies": []
-    },
-    {
-      "name": "flutter_web_plugins",
-      "version": "0.0.0",
-      "dependencies": [
-        "flutter"
-      ]
     },
     {
       "name": "sky_engine",
