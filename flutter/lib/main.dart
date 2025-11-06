@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BotmakerWebchatPage(webchatId: 'GZ8QBYYH6K'), // Webchat ID: configurable. README.md
+      home: BotmakerWebchatPage(webchatId: 'A6TT4D3H4L'), // Webchat ID: configurable. README.md
     );
   }
 }
