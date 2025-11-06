@@ -1,0 +1,135 @@
+{
+  "roots": [
+    "botmaker_webchat_flutter"
+  ],
+  "packages": [
+    {
+      "name": "botmaker_webchat_flutter",
+      "version": "0.0.0",
+      "dependencies": [
+        "flutter",
+        "webview_flutter",
+        "webview_flutter_android",
+        "webview_flutter_web",
+        "webview_flutter_wkwebview"
+      ],
+      "devDependencies": []
+    },
+    {
+      "name": "webview_flutter_wkwebview",
+      "version": "3.23.2",
+      "dependencies": [
+        "flutter",
+        "meta",
+        "path",
+        "webview_flutter_platform_interface"
+      ]
+    },
+    {
+      "name": "webview_flutter_android",
+      "version": "3.16.9",
+      "dependencies": [
+        "flutter",
+        "webview_flutter_platform_interface"
+      ]
+    },
+    {
+      "name": "webview_flutter_web",
+      "version": "0.2.3+4",
+      "dependencies": [
+        "flutter",
+        "flutter_web_plugins",
+        "web",
+        "webview_flutter_platform_interface"
+      ]
+    },
+    {
+      "name": "webview_flutter",
+      "version": "4.9.0",
+      "dependencies": [
+        "flutter",
+        "webview_flutter_android",
+        "webview_flutter_platform_interface",
+        "webview_flutter_wkwebview"
+      ]
+    },
+    {
+      "name": "flutter",
+      "version": "0.0.0",
+      "dependencies": [
+        "characters",
+        "collection",
+        "material_color_utilities",
+        "meta",
+        "sky_engine",
+        "vector_math"
+      ]
+    },
+    {
+      "name": "webview_flutter_platform_interface",
+      "version": "2.14.0",
+      "dependencies": [
+        "flutter",
+        "meta",
+        "plugin_platform_interface"
+      ]
+    },
+    {
+      "name": "path",
+      "version": "1.9.1",
+      "dependencies": []
+    },
+    {
+      "name": "meta",
+      "version": "1.16.0",
+      "dependencies": []
+    },
+    {
+      "name": "web",
+      "version": "1.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "flutter_web_plugins",
+      "version": "0.0.0",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
+      "name": "sky_engine",
+      "version": "0.0.0",
+      "dependencies": []
+    },
+    {
+      "name": "vector_math",
+      "version": "2.2.0",
+      "dependencies": []
+    },
+    {
+      "name": "material_color_utilities",
+      "version": "0.11.1",
+      "dependencies": [
+        "collection"
+      ]
+    },
+    {
+      "name": "collection",
+      "version": "1.19.1",
+      "dependencies": []
+    },
+    {
+      "name": "characters",
+      "version": "1.4.0",
+      "dependencies": []
+    },
+    {
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
+      "dependencies": [
+        "meta"
+      ]
+    }
+  ],
+  "configVersion": 1
+}
