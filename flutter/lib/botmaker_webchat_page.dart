@@ -1,10 +1,12 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class BotmakerWebchatPage extends StatefulWidget {
+  final String webchatId;
+
   const BotmakerWebchatPage({
     super.key,
+    required this.webchatId,
   });
 
   @override
@@ -14,7 +16,7 @@ class BotmakerWebchatPage extends StatefulWidget {
 class _BotmakerWebchatPageState extends State<BotmakerWebchatPage> {
   late final WebViewController _controller;
 
-  String _html() => '''
+  String _html(String webchatId) => '''
   <!DOCTYPE html>
   <html lang="es">
   <head>
@@ -25,25 +27,20 @@ class _BotmakerWebchatPageState extends State<BotmakerWebchatPage> {
   </head>
   <body>
     <h1>Webchat de ejemplo (Flutter)</h1>
-
     <script>
       window.BOTMAKER_VAR = {
         userIdOnBusiness: 'userId123',
         firstName: 'Flutter',
         lastName: 'Demo'
       };
-
       window.BOTMAKER_ACTION = {
-        onload: function () {
-          console.log('[Webchat] cargado (Flutter).');
-        }
+        onload: function () { console.log('[Webchat] cargado (Flutter).'); }
       };
-
       (function () {
         var js = document.createElement("script");
         js.type = "text/javascript";
         js.async = true;
-        js.src = "https://go.botmaker.com/rest/webchat/p/A6TT4D3H4L/init.js";
+        js.src = "https://go.botmaker.com/rest/webchat/p/''' + webchatId + '''/init.js";
         document.body.appendChild(js);
       })();
     </script>
@@ -54,10 +51,9 @@ class _BotmakerWebchatPageState extends State<BotmakerWebchatPage> {
   @override
   void initState() {
     super.initState();
-
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..loadHtmlString(_html());
+      ..loadHtmlString(_html(widget.webchatId));
   }
 
   @override

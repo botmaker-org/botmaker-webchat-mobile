@@ -5,7 +5,9 @@ Ejemplo Webchat con Flutter.
 - Podés probar usando el script de tu bot
 
 - El script de integración se consigue en:
-  **go.botmaker.com/#/integrations/channels → Webchat -> "Probar Webchat"**.
+  **go.botmaker.com/#/integrations/channels → Webchat -> "Probar Webchat" o "Instalación"**.
+
+![alt text](image.png)
 
 **Para ejecutar**
 - Se puede conectar un dispositivo Android mediante USB (validar en opciones de desarrollador que 'Depuración por USB' esté activado)

@@ -5,7 +5,9 @@ Ejemplo página HTML simple.
 - Podés probar usando el script de tu bot
 
 - El script de integración se consigue en:
-  **go.botmaker.com/#/integrations/channels → Webchat -> "Probar Webchat"**.
+  **go.botmaker.com/#/integrations/channels → Webchat -> "Probar Webchat" o "Instalación"**.
+
+![alt text](image.png)
 
 - Métodos expuestos:
   `bmShow()`, `bmHide()`, `bmMinimize()`, `bmMaximize()`, `bmInfo()`,

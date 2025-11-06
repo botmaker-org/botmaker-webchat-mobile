@@ -1,11 +1,35 @@
 <!-- web/index.html -->
-<script>
-  window.BOTMAKER_VAR = { userIdOnBusiness: 'userId123' };
-  (function () {
-    const s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://go.botmaker.com/rest/webchat/p/A6TT4D3H4L/init.js';
-    document.body.appendChild(s);
-  })();
-</script>
-<script src="main.dart.js"></script>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="botmaker-webchat-id" content="GZ8QBYYH6K" /> <!-- ID de Webchat: Configurable. README.md -->
+
+    <title>Flutter Webchat Demo</title>
+  </head>
+  <body>
+    <script>
+      function getWebchatId() {
+        const qs = new URLSearchParams(location.search).get('webchatId');
+        if (qs) return qs;
+        const meta = document.querySelector('meta[name="botmaker-webchat-id"]');
+        return meta?.content || 'GZ8QBYYH6K';
+      }
+
+      window.BOTMAKER_VAR = { userIdOnBusiness: 'userId123' };
+
+      window.addEventListener('DOMContentLoaded', function () {
+        const id = getWebchatId();
+        const s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://go.botmaker.com/rest/webchat/p/' + id + '/init.js';
+        document.body.appendChild(s);
+      });
+    </script>
+
+    <script src="main.dart.js" type="application/javascript"></script>
+  </body>
+</html>

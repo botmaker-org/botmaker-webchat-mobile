@@ -18,6 +18,10 @@
   </div>
 
   <script>
+    const DEFAULT_WEBCHAT_ID = 'GZ8QBYYH6K'; // Webchat ID configurable. README.md
+    const qsId = new URLSearchParams(location.search).get('webchatId'); // Opcion: ?webchatId=XXXXX en la URL
+    const webchatId = qsId || DEFAULT_WEBCHAT_ID;
+
     window.BOTMAKER_VAR = {
       userIdOnBusiness: 'userId123',
       //otras variables:
@@ -35,12 +39,12 @@
       }
     };
 
-    // Nota: el script oficial se obtiene en go.botmaker.com/#/integrations/channels → Webchat -> "Probar Webchat"
+    // Nota: el script oficial se obtiene en go.botmaker.com/#/integrations/channels → Webchat -> "Probar Webchat" o "Instalación" 
     (function () {
       const js = document.createElement('script');
       js.type = 'text/javascript';
       js.async = true;
-      js.src = 'https://go.botmaker.com/rest/webchat/p/A6TT4D3H4L/init.js';
+      js.src = 'https://go.botmaker.com/rest/webchat/p/' + webchatId + '/init.js';
       document.body.appendChild(js);
     })();
 
