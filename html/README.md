@@ -11,6 +11,6 @@ Ejemplo página HTML simple.
   `bmShow()`, `bmHide()`, `bmMinimize()`, `bmMaximize()`, `bmInfo()`,
   `bmSetVariables({...})`, `bmSendMessage('texto')`.
 
-> Para ejecutar el HTML:
-> Opción 1: Doble click sobre el archivo
-> Opción 2: Parado en la carpeta /html ejecutar `python -m http.server 8080`.
+**Para ejecutar el HTML**
+- Opción 1: Doble click sobre el archivo
+- Opción 2: Parado en la carpeta /html ejecutar `python -m http.server 8080`.

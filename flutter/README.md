@@ -1,16 +1,13 @@
 # botmaker_webchat_flutter
 
-A new Flutter project.
+Ejemplo Webchat con Flutter.
 
-## Getting Started
+- Podés probar usando el script de tu bot
 
-This project is a starting point for a Flutter application.
+- El script de integración se consigue en:
+  **go.botmaker.com/#/integrations/channels → Webchat -> "Probar Webchat"**.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Para ejecutar**
+- Se puede conectar un dispositivo Android mediante USB (validar en opciones de desarrollador que 'Depuración por USB' esté activado)
+- Correr: `flutter pub get`, `flutter devices` para validar que el dispositivo es reconocido. Si aparece, ejecutar: `flutter run -d <device_id>`. 
+- Otra opción: Usar emuladores de Android. 
