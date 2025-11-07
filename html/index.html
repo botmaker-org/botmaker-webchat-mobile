@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botmaker Webchat – HTML</title>
+</head>
+<body>
+  <h1>Botmaker Webchat</h1>
+
+  <div style="margin:12px 0;">
+    <button id="btnMin">Minimizar</button>
+    <button id="btnMax">Maximizar</button>
+    <button id="btnShow">Mostrar</button>
+    <button id="btnHide">Ocultar</button>
+    <button id="btnInfo">Info → consola</button>
+    <button id="btnMsg">Enviar “Hola”</button>
+  </div>
+
+  <script>
+    const DEFAULT_WEBCHAT_ID = 'GZ8QBYYH6K'; // Webchat ID configurable. README.md
+    const qsId = new URLSearchParams(location.search).get('webchatId'); // Opcion: ?webchatId=XXXXX en la URL
+    const webchatId = qsId || DEFAULT_WEBCHAT_ID;
+
+    window.BOTMAKER_VAR = {
+      userIdOnBusiness: 'userId123',
+      //otras variables:
+      firstName: 'HTML',
+    };
+
+    window.BOTMAKER_ACTION = {
+      onload: function () {
+        document.getElementById('btnMin').onclick  = () => bmMinimize();
+        document.getElementById('btnMax').onclick  = () => bmMaximize();
+        document.getElementById('btnShow').onclick = () => bmShow();
+        document.getElementById('btnHide').onclick = () => bmHide();
+        document.getElementById('btnInfo').onclick = () => console.log(bmInfo());
+        document.getElementById('btnMsg').onclick  = () => bmSendMessage('Hola desde HTML!');
+      }
+    };
+
+    // Nota: el script oficial se obtiene en go.botmaker.com/#/integrations/channels → Webchat -> "Probar Webchat" o "Instalación" 
+    (function () {
+      const js = document.createElement('script');
+      js.type = 'text/javascript';
+      js.async = true;
+      js.src = 'https://go.botmaker.com/rest/webchat/p/' + webchatId + '/init.js';
+      document.body.appendChild(js);
+    })();
+
+  </script>
+</body>
+</html>

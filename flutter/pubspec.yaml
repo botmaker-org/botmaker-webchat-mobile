@@ -1,0 +1,14 @@
+name: botmaker_webchat_flutter
+description: "Demo Flutter para Botmaker Webchat"
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.8.0
+  webview_flutter_android: ^3.16.0
+  webview_flutter_wkwebview: ^3.13.1
+
+flutter:
+  uses-material-design: true
